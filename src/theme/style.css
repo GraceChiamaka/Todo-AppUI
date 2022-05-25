@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Avenir;
+  src: url("../assets/fonts/avenir/AvenirLTStd-Book.otf");
+}
+@font-face {
+  font-family: AvenirBlack;
+  src: url("../assets/fonts/avenir/AvenirLTStd-Black.otf");
+}
+@font-face {
+  font-family: AvenirRoman;
+  src: url("../assets/fonts/avenir/AvenirLTStd-Roman.otf");
+}
+
+.ant-dropdown.nav-dropdown-menu {
+  width: 700px !important;
+}
+
+.ant-dropdown.nav-dropdown-menu .ant-dropdown-menu {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 575px) {
+  .ant-dropdown.nav-dropdown-menu {
+    width: 100% !important;
+  }
+}
