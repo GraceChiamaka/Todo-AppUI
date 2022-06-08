@@ -6,22 +6,17 @@ interface MyStorage {
 
 const storageController: MyStorage = {
   store: async (data: any, key: string) => {
-    try {
-      await window.localStorage.setItem(key, data);
-    } catch (error) {
-      console.log(error);
-      throw error;
+    if (typeof window !== "undefined") {
+      localStorage.setItem(key, data);
     }
   },
-  get: async (key: string): Promise<string | null> => {
-    try {
-      const result = await window.localStorage.getItem(key);
-      if (!result) {
-        return null;
+  get: (key: string) => {
+    if (typeof window !== "undefined") {
+      const result = localStorage.getItem(key);
+      if (result) {
+        return JSON.stringify(result);
       }
-      return result;
-    } catch (error) {
-      throw error;
+      return null;
     }
   },
   clearAll: async () => {

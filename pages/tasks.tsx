@@ -1,5 +1,6 @@
 import { PageHeader } from "@components/Head";
 import { TasksContent } from "@src/components";
+import { withAuth } from "@components/HOC/withAuth";
 
 const Tasks = () => {
   return (
@@ -10,4 +11,4 @@ const Tasks = () => {
   );
 };
 
-export default Tasks;
+export default withAuth(Tasks);

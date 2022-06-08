@@ -23,6 +23,22 @@ export const ButtonContainer = styled.button<{
   justify-content: center;
   border-radius: ${({ theme }) => theme.borderRadius.primary};
   cursor: pointer;
+  gap: 5px;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  .ant-spin-spinning {
+    .ant-spin-dot-spin {
+      width: 12px;
+      height: 12px;
+      .ant-spin-dot-item {
+        background-color: ${({ theme }) => theme.colors.pink[300]};
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
 `;
 
 // ${({theme}) => theme.};
