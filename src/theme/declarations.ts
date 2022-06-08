@@ -40,6 +40,9 @@ const colors = {
     100: "#F9D55F",
     0: "#CAA42C",
   },
+  red: {
+    100: "#FF5F6D",
+  },
 
   blue: {
     500: "#F5F8FC",

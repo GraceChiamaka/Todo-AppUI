@@ -1,29 +1,44 @@
 import { FC } from "react";
+import { Input } from "antd";
 import { InputContainer } from "./style";
 
 type InputProps = {
   type?: string;
-  onChange?: () => void;
+  onChange?: (ev?: any) => void;
   value?: string;
   placeholder?: string;
   required?: boolean;
+  name?: string;
 };
 
-export const Input: FC<InputProps> = ({
+export const CustomInput: FC<InputProps> = ({
   type,
   onChange,
   value,
   placeholder,
   required = false,
+  name,
 }) => {
-  return (
+  return type === "password" ? (
     <InputContainer>
-      <input
+      <Input.Password
         placeholder={placeholder}
         value={value}
         type={type}
         onChange={onChange}
         required={required}
+        name={name}
+      />
+    </InputContainer>
+  ) : (
+    <InputContainer>
+      <Input
+        placeholder={placeholder}
+        value={value}
+        type={type}
+        onChange={onChange}
+        required={required}
+        name={name}
       />
     </InputContainer>
   );

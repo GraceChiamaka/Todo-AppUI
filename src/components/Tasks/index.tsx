@@ -1,11 +1,12 @@
-import {} from "./style";
-import { Header } from "@components/General";
+import { Row, Col } from "antd";
+import { PageLayout } from "@components/Layout/PageLayout";
 
 export const TasksContent = () => {
   return (
-    <div>
-      <Header />
-      TASKSSSS
-    </div>
+    <PageLayout>
+      <Row>
+        <Col lg={14}> TASKSSS</Col>
+      </Row>
+    </PageLayout>
   );
 };

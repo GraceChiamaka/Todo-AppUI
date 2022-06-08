@@ -1,6 +1,7 @@
 import "@theme/normalize.css";
 import "@theme/style.css";
 import { AppProps } from "next/app";
+import "antd/dist/antd.css";
 import { ThemeProvider } from "styled-components";
 import theme from "@theme/index";
 
