@@ -5,7 +5,6 @@ const ACCESS_TOKEN = "TASKME_TOKEN";
 
 const API_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL;
 
-
 class BaseRequest {
   protected api: AxiosInstance;
   protected auth: AxiosInstance;
@@ -24,7 +23,7 @@ class BaseRequest {
       try {
         const token: any = await storageController.get(ACCESS_TOKEN);
 
-        if (token) {
+        if (token && req.headers) {
           req.headers.Authorization = `Bearer ${token}`;
         }
       } catch (error) {
